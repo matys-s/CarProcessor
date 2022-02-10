@@ -1,13 +1,11 @@
-﻿using System;
+﻿using CsvHelper;
+using CsvHelper.Configuration;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CarProcessor
@@ -38,7 +36,6 @@ namespace CarProcessor
             {
                 MessageBox.Show(item.ToString());
             }
-
         }
 
         private void btnLoadFile_Click(object sender, EventArgs e)
@@ -53,6 +50,11 @@ namespace CarProcessor
                 {
                     var readAllText = File.ReadAllText(openFileDialog.FileName);
                     myTextArea.Text = readAllText;
+
+
+                    //Preparation for further implementation works
+                    //var path = openFileDialog.FileName;
+                    //CreateCarsData(path);
                 }
             }
         }
@@ -66,6 +68,53 @@ namespace CarProcessor
             return sourceFolder;
         }
 
+        public static void CreateCarsData(string path)
+        {
+            List<LightCar> lightCars = new List<LightCar>();
+            List<TruckCar> truckCars = new List<TruckCar>();
 
+            var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                IgnoreBlankLines = false,
+                Delimiter = ";",
+            };
+            using (var reader = new StreamReader(path))
+            using (var csv = new CsvReader(reader, config))
+            {
+                csv.Context.RegisterClassMap<LightCarMap>();
+                csv.Context.RegisterClassMap<TruckCarMap>();
+
+
+                var isHeader = true;
+                while (csv.Read())
+                {
+                    if (isHeader)
+                    {
+                        var readHeader = csv.ReadHeader();
+                        var csvHeaderRecord = csv.HeaderRecord;
+                        isHeader = false;
+                        continue;
+                    }
+
+                    if (string.IsNullOrEmpty(csv.GetField(0)))
+                    {
+                        isHeader = true;
+                        continue;
+                    }
+
+                    switch (csv.GetField(0))
+                    {
+                        case "Truck":
+                            truckCars.Add(csv.GetRecord<TruckCar>());
+                            break;
+                        case "LightCar":
+                            lightCars.Add(csv.GetRecord<LightCar>());
+                            break;
+                        default:
+                            throw new InvalidOperationException("Unknown record type.");
+                    }
+                }
+            }
+        }
     }
 }

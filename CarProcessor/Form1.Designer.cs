@@ -30,8 +30,8 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.btnLoadFile = new System.Windows.Forms.Button();
-            this.myTextArea = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.myTextArea = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -51,14 +51,6 @@
             this.btnLoadFile.UseVisualStyleBackColor = true;
             this.btnLoadFile.Click += new System.EventHandler(this.btnLoadFile_Click);
             // 
-            // myTextArea
-            // 
-            this.myTextArea.Location = new System.Drawing.Point(35, 66);
-            this.myTextArea.Multiline = true;
-            this.myTextArea.Name = "myTextArea";
-            this.myTextArea.Size = new System.Drawing.Size(753, 324);
-            this.myTextArea.TabIndex = 6;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -70,6 +62,14 @@
             this.label1.Text = "Car Processor";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.UseWaitCursor = true;
+            // 
+            // myTextArea
+            // 
+            this.myTextArea.Location = new System.Drawing.Point(35, 66);
+            this.myTextArea.Multiline = true;
+            this.myTextArea.Name = "myTextArea";
+            this.myTextArea.Size = new System.Drawing.Size(753, 327);
+            this.myTextArea.TabIndex = 6;
             // 
             // Form1
             // 
@@ -90,8 +90,8 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLoadFile;
-        private System.Windows.Forms.TextBox myTextArea;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox myTextArea;
     }
 }
 

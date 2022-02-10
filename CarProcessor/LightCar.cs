@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarProcessor
 {
-    public class LightCar : Car
+    public class LightCar : Car 
     {
         public string EngineCapacity { get; set; }
         public int DoorsNumber { get; set; }

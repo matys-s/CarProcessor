@@ -8,19 +8,21 @@ namespace CarProcessor
 {
     public class TruckCar : Car
     {
-        public int TruckCapacity { get; set; }
-        public int TruckAxlePress { get; set; }
-        
+        public double TruckCapacity { get; set; }
+        public double TruckAxlePress { get; set; }
+        public int NumberOfAxles { get; set; }
+
 
         public TruckCar() { }
 
-        public TruckCar(string brand, string model, int truckCapacity, int truckAxlePress)
+        public TruckCar(string brand, string model, int truckCapacity, int truckAxlePress, int numberOfAxles)
         {
             Brand = brand;
             Model = model;
             TruckCapacity = truckCapacity;
             TruckAxlePress = truckAxlePress;
             CarType = CarType.Truck;
+            NumberOfAxles = numberOfAxles;
         }
     }
 

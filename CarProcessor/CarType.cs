@@ -2,7 +2,7 @@
 {
     public enum CarType
     {
-        LightCar = 'O',
-        Truck = 'C'
+        LightCar,
+        Truck
     }
 }
