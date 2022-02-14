@@ -21,7 +21,7 @@ namespace CarProcessor
             EngineCapacity = engineCapacity;
             DoorsNumber = doorsNumber;
             PassengersQuantity = passengersQuantity;
-            CarType = CarType.LightCar;
+           
         }
     }
 }

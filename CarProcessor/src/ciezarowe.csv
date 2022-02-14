@@ -1,6 +1,6 @@
-﻿Typ;Marka;Model;Ładowność(T);Ilość osi;Nacisk na oś(T)
-C;MAN;TGX 6x2;20;3;10
-C;MAN;TGX 4x2;19;2;10
-C;Mercedes-Benz;Actros;35;2;11,5
-C;Scania;770s;28;2;10,5
-C;Volvo;FH16 4x2;30;2;13
+﻿Marka;Model;Ładowność(T);Ilość osi;Nacisk na oś(T)
+MAN;TGX 6x2;20;3;10
+MAN;TGX 4x2;19;2;10
+Mercedes-Benz;Actros;35;2;11,5
+Scania;770s;28;2;10,5
+Volvo;FH16 4x2;30;2;13

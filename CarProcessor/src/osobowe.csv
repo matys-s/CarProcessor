@@ -1,6 +1,6 @@
-﻿Typ;Marka;Model;Pojemność silnika;Ilość drzwi;Ilość pasażerów
-O;Audi;A4;1995;4;5
-O;Bmw;Z4;3500;2;2
-O;VW;Arteon;2000;4;5
-O;Toyota;Rav4;2499;4;5
-O;Seat;Ibiza;1400;2;5
+﻿Marka;Model;Pojemność silnika;Ilość drzwi;Ilość pasażerów
+Audi;A4;1995;4;5
+Bmw;Z4;3500;2;2
+VW;Arteon;2000;4;5
+Toyota;Rav4;2499;4;5
+Seat;Ibiza;1400;2;5

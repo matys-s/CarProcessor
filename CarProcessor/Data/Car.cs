@@ -8,7 +8,6 @@ namespace CarProcessor
 {
     public abstract class Car
     {
-        public CarType CarType { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
         
